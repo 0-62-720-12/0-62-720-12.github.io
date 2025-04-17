@@ -2,7 +2,9 @@ body {
   color: purple;
   background-color: lightblue;
   font-family: arial;
+text-align: center;
   
 }
 h1 {text-decoration: underline;
 }
+div {text-align: left;}
