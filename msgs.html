@@ -8,25 +8,24 @@
         top: 0;
         left: 0;
         width: 100%;
-        max-width: 1200px; /* Constrain the header width */
         z-index: 1000;
         height: 100px; /* Define consistent height */
         display: flex;
-        align-items: center; /* Vertically center the text */
-        justify-content: space-between; /* Space out the title and links */
+        align-items: center; /* Vertically align both h1 and nav */
+        justify-content: space-between; /* Space out h1 and nav evenly */
         padding: 0 20px; /* Add padding for better spacing */
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        margin: 0 auto; /* Center the header within the viewport */
       }
 
       .header h1 {
-        margin: 0; /* Remove default margin around the <h1> */
-        font-size: 1.5rem; /* Adjust font size if necessary */
+        margin: 0; /* Remove default margin around the h1 */
+        font-size: 2rem; /* Adjust font size for visibility */
+        line-height: 1; /* Ensure no extra spacing inside h1 */
       }
 
       nav {
         display: flex;
-        gap: 15px; /* Add consistent spacing between links */
+        gap: 10px; /* Add consistent spacing between links */
       }
 
       nav a {
