@@ -9,15 +9,41 @@
         left: 0;
         width: 100%;
         z-index: 1000;
-        height: 100px;
-        line-height: 100px;
+        height: 100px; /* Define consistent height */
+        display: flex;
+        align-items: center; /* Vertically center the text */
+        justify-content: space-between; /* Space links and title */
+        padding: 0 20px; /* Add padding for better spacing */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
       }
+
+      nav a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+      }
+
       body {
         font-family: Arial, sans-serif;
-        text-align: center;
         margin: 0;
         padding: 0;
-        padding-top: 100px; /* Matches the height of the header */
+        background-color: #f9f9f9; /* Set a body background color */
+        padding-top: 100px; /* Ensure content starts below the header */
+        box-sizing: border-box; /* Include padding in width/height calculations */
+      }
+
+      main {
+        padding: 20px;
+      }
+
+      p {
+        margin: 15px 0;
+      }
+
+      a {
+        color: blue;
+        text-decoration: underline;
       }
     </style> 
     <meta charset="UTF-8">
