@@ -1,11 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-	          <style>
-      body{
+  <style>
+      /* Header styling */
+      .header {
         background-color: lightblue;
-        font-family: arial;
-        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        height: 100px; /* Fixed consistent height */
+        display: flex;
+        flex-direction: row; /* Align items horizontally */
+        align-items: center; /* Vertically align items */
+        justify-content: space-between; /* Space between h1 and nav */
+        padding: 0 20px; /* Horizontal padding */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+        box-sizing: border-box; /* Ensure padding is included in width */
+      }
+
+      /* H1 styling */
+      .header h1 {
+        margin: 0; /* Remove default margin */
+        font-size: 2rem; /* Adjust font size */
+        line-height: 1; /* Consistent spacing */
+        white-space: nowrap; /* Prevent wrapping */
+      }
+
+      /* Navigation styling */
+      nav {
+        display: flex;
+        gap: 20px; /* Space between links */
+      }
+
+      nav a {
+        text-decoration: none; /* Remove underline */
+        color: black; /* Link color */
+        font-weight: bold; /* Bold text */
+        font-size: 1rem; /* Font size */
+        line-height: 1; /* Prevent extra spacing */
+      }
+
+      /* Body styling */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9; /* Light background color */
+        padding-top: 100px; /* Offset for fixed header */
+        box-sizing: border-box; /* Include padding in width/height */
+      }
+
+      /* Main content styling */
+      main {
+        padding: 20px;
+      }
+
+      p {
+        margin: 15px 0;
+      }
+
+      a {
+        color: blue;
+        text-decoration: underline;
       }
     </style>
     <meta charset="UTF-8">
@@ -16,7 +74,7 @@
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
   </head>
   <body>
-
+   <header class="header">
         <h1>UNBLOCKED GAMES</h1>
         <nav>
             <a href="creds.html">CREDITS</a>
@@ -24,6 +82,7 @@
             <a href="msgs.html">INFO</a>
             <a href="index.html">HOME</a>
         </nav>
+   </header>
 
   </body>
 </html>
