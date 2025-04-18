@@ -8,13 +8,15 @@
         top: 0;
         left: 0;
         width: 100%;
+        max-width: 1200px; /* Constrain the header width */
         z-index: 1000;
         height: 100px; /* Define consistent height */
         display: flex;
         align-items: center; /* Vertically center the text */
-        justify-content: space-between; /* Space links and title */
+        justify-content: space-between; /* Space out the title and links */
         padding: 0 20px; /* Add padding for better spacing */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin: 0 auto; /* Center the header within the viewport */
       }
 
       nav {
