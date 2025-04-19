@@ -6,98 +6,57 @@
 <html lang="en">
   <head>
     <style>
-      /* Header styling */
-      .header {
-        background-color: lightblue;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-        height: 100px; /* Fixed consistent height */
-        display: flex;
-        flex-direction: row; /* Align items horizontally */
-        align-items: center; /* Vertically align items */
-        justify-content: space-between; /* Space between h1 and nav */
-        padding: 0 20px; /* Horizontal padding */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
-        box-sizing: border-box; /* Ensure padding is included in width */
-      }
+<style>
+  /* Default header styling */
+  .header {
+    background-color: lightblue; /* Ensure background color is always set */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 100px; /* Fixed consistent height */
+    display: flex;
+    flex-direction: row; /* Align items horizontally */
+    align-items: center; /* Vertically align items */
+    justify-content: space-between; /* Space between h1 and nav */
+    padding: 0 20px; /* Horizontal padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    box-sizing: border-box; /* Ensure padding is included in width */
+  }
 
-      /* H1 styling */
-      .header h1 {
-        margin: 0; /* Remove default margin */
-        font-size: 2rem; /* Adjust font size */
-        line-height: 1; /* Consistent spacing */
-        white-space: nowrap; /* Prevent wrapping */
-      }
+  /* Media query for vertical (small) screens */
+  @media (max-width: 600px) {
+    .header {
+      flex-direction: column; /* Stack header items vertically */
+      height: auto; /* Allow height to adjust */
+      align-items: flex-start; /* Align items to the left */
+      padding: 10px; /* Adjust padding */
+      background-color: lightblue; /* Ensure background color is applied */
+    }
 
-      /* Navigation styling */
-      nav {
-        display: flex;
-        flex-direction: row; /* Default horizontal layout */
-        gap: 20px; /* Space between links */
-      }
+    nav {
+      flex-direction: column; /* Stack links vertically */
+      width: 100%; /* Full width */
+      gap: 10px; /* Reduce gap between links */
+    }
+  }
 
-      nav a {
-        text-decoration: none; /* Remove underline */
-        color: black; /* Link color */
-        font-weight: bold; /* Bold text */
-        font-size: 1rem; /* Font size */
-        line-height: 1; /* Prevent extra spacing */
-      }
+  /* Media query for horizontal (larger) screens */
+  @media (min-width: 601px) {
+    .header {
+      background-color: lightblue; /* Explicitly set the background color */
+      flex-direction: row; /* Restore horizontal layout */
+      height: 100px; /* Fixed consistent height */
+      align-items: center;
+    }
 
-      /* Body styling */
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f9f9f9; /* Light background color */
-        padding-top: 100px; /* Offset for fixed header */
-        box-sizing: border-box; /* Include padding in width/height */
-        color: black; /* Ensure text color */
-      }
-
-      /* Main content styling */
-      main {
-        padding: 20px;
-      }
-
-      p {
-        margin: 15px 0;
-      }
-
-      a {
-        color: blue;
-        text-decoration: underline;
-      }
-
-      /* For smaller (vertical) screens */
-      @media (max-width: 600px) {
-        .header {
-          background-color: lightblue;
-          flex-direction: column; /* Stack header items vertically */
-          height: auto; /* Allow height to adjust */
-          align-items: flex-start; /* Align items to the left */
-          padding: 10px; /* Adjust padding */
-        }
-
-        nav {
-          flex-direction: column; /* Stack links vertically */
-          width: 100%; /* Full width */
-          gap: 10px; /* Reduce gap between links */
-        }
-
-        nav a {
-          display: block; /* Ensure links take up full width */
-          text-align: left; /* Align text to the left */
-        }
-
-        body {
-          background-color: #f9f9f9; /* Ensure background color is defined */
-          color: black; /* Ensure text is visible */
-        }
-    
+    nav {
+      flex-direction: row; /* Restore horizontal layout */
+      gap: 20px; /* Maintain spacing */
+    }
+  }
+</style>
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
