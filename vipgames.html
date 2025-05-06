@@ -30,7 +30,6 @@
     <h1>Sign In to Access VIP Games</h1>
     <div id="g_id_onload"
          data-client_id="67957050735-n1a9sse7atir2v33ri25ku9r03svd0v8.apps.googleusercontent.com"
-         data-login_uri="https://goat-sigma.github.io/vipgames.html"
          data-auto_prompt="false">
     </div>
     <div class="g_id_signin" data-type="standard"></div>
@@ -76,18 +75,29 @@
 
   <script>
     const allowedEmails = [
-  "declanradabaugh@worlandhs.com", "sagelarson@worlandhs.com", "rivergetzfreid@worlandhs.com", "damienmitchell@worlandhs.com", "jaedonwiniecki@worlandhs.com,", "davidahlstrom@worlandhs.com", "takenwasusername@gmail.com", "irapeck@worlandhs.com", "vincentkellogg@worlandhs.com", "official.raddish@gmail.com", "declanradabaugh@gmail.com"
+      "declanradabaugh@worlandhs.com",
+      "sagelarson@worlandhs.com",
+      "rivergetzfreid@worlandhs.com",
+      "damienmitchell@worlandhs.com",
+      "jaedonwiniecki@worlandhs.com",
+      "davidahlstrom@worlandhs.com",
     ];
 
     function handleCredentialResponse(response) {
-      const token = response.credential;
-      const decodedToken = parseJwt(token); // Decode the JWT to get user email
+      try {
+        const token = response.credential;
+        const decodedToken = parseJwt(token); // Decode the JWT to get user email
+        console.log("Decoded token:", decodedToken); // Debugging
 
-      if (allowedEmails.includes(decodedToken.email)) {
-        document.getElementById("signin").style.display = "none";
-        document.getElementById("content").style.display = "block";
-      } else {
-        window.location.href = "deny.html"; // Redirect unauthorized users
+        if (allowedEmails.includes(decodedToken.email)) {
+          document.getElementById("signin").style.display = "none";
+          document.getElementById("content").style.display = "block";
+        } else {
+          console.error("Unauthorized email:", decodedToken.email);
+          window.location.href = "deny.html"; // Redirect unauthorized users
+        }
+      } catch (error) {
+        console.error("Error decoding token:", error);
       }
     }
 
