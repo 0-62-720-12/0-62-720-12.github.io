@@ -1,122 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VIP Games</title>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
   <style>
-      /* Header styling */ 
-      .header {
-        background-color: lightblue;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-        height: 100px; /* Fixed consistent height */
-        display: flex;
-        flex-direction: row; /* Align items horizontally */
-        align-items: center; /* Vertically align items */
-        justify-content: space-between; /* Space between h1 and nav */
-        padding: 0 20px; /* Horizontal padding */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
-        box-sizing: border-box; /* Ensure padding is included in width */
-      }
+    /* Hide the main content by default */
+    #content { 
+      display: none; 
+    }
 
-      /* H1 styling */
-      .header h1 {
-        margin: 0; /* Remove default margin */
-        font-size: 2rem; /* Adjust font size */
-        line-height: 1; /* Consistent spacing */
-        white-space: nowrap; /* Prevent wrapping */
-      }
+    /* Center the sign-in prompt */
+    #signin {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
 
-      /* Navigation styling */
-      nav {
-        display: flex;
-        gap: 20px; /* Space between links */
-      }
+    #signin h1 {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="signin">
+    <h1>Sign In to Access VIP Games</h1>
+    <div id="g_id_onload"
+         data-client_id="YOUR_CLIENT_ID"
+         data-login_uri=""
+         data-auto_prompt="false">
+    </div>
+    <div class="g_id_signin" data-type="standard"></div>
+  </div>
 
-      nav a {
-        text-decoration: none; /* Remove underline */
-        color: black; /* Link color */
-        font-weight: bold; /* Bold text */
-        font-size: 1rem; /* Font size */
-        line-height: 1; /* Prevent extra spacing */
-      }
+  <div id="content">
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+      <style>
+          /* Header styling */ 
+          .header {
+            background-color: lightblue;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            height: 100px; /* Fixed consistent height */
+            display: flex;
+            flex-direction: row; /* Align items horizontally */
+            align-items: center; /* Vertically align items */
+            justify-content: space-between; /* Space between h1 and nav */
+            padding: 0 20px; /* Horizontal padding */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+            box-sizing: border-box; /* Ensure padding is included in width */
+          }
 
-      /* Body styling */
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f9f9f9; /* Light background color */
-        padding-top: 100px; /* Offset for fixed header */
-        box-sizing: border-box; /* Include padding in width/height */
-      }
+          /* H1 styling */
+          .header h1 {
+            margin: 0; /* Remove default margin */
+            font-size: 2rem; /* Adjust font size */
+            line-height: 1; /* Consistent spacing */
+            white-space: nowrap; /* Prevent wrapping */
+          }
 
-      /* Main content styling */
-      main {
-        padding: 20px;
-      }
+          /* Navigation styling */
+          nav {
+            display: flex;
+            gap: 20px; /* Space between links */
+          }
 
-      p {
-        margin: 15px 0;
-      }
+          nav a {
+            text-decoration: none; /* Remove underline */
+            color: black; /* Link color */
+            font-weight: bold; /* Bold text */
+            font-size: 1rem; /* Font size */
+            line-height: 1; /* Prevent extra spacing */
+          }
 
-      a {
-        color: blue;
-        text-decoration: underline;
-      }
+          /* Body styling */
+          body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9; /* Light background color */
+            padding-top: 100px; /* Offset for fixed header */
+            box-sizing: border-box; /* Include padding in width/height */
+          }
 
-      /* Image styling */
-      img {
-        width: 150px; /* Set a fixed width */
-        height: 150px; /* Set a fixed height */
-        object-fit: cover; /* Ensure images maintain aspect ratio and fill the area */
-        border: 2px solid #ddd; /* Optional border for styling */
-        border-radius: 5px; /* Optional rounded corners */
+          /* Main content styling */
+          main {
+            padding: 20px;
+          }
+
+          p {
+            margin: 15px 0;
+          }
+
+          a {
+            color: blue;
+            text-decoration: underline;
+          }
+
+          /* Image styling */
+          img {
+            width: 150px; /* Set a fixed width */
+            height: 150px; /* Set a fixed height */
+            object-fit: cover; /* Ensure images maintain aspect ratio and fill the area */
+            border: 2px solid #ddd; /* Optional border for styling */
+            border-radius: 5px; /* Optional rounded corners */
+          }
+        </style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Unblocked gamesss</title>
+        <link rel="stylesheet" href="./style1.css">
+        <link rel="icon" href="./favicon.ico" type="image/x-icon">
+      </head>
+      <body>
+        <main>
+       <header class="header">
+            <h1>UNBLOCKED GAMES</h1>
+            <nav>
+                <a href="creds.html">FEEDBACK</a>
+                <h3>GAMES</h3>
+                <a href="msgs.html">INFO</a>
+                <a href="index.html">HOME</a>
+            </nav>
+       </header>
+          <audio id="myAudio" hidden autoplay>
+      <source src="background-music-soft-calm-333111.mp3" type="audio/mpeg">
+    </audio>
+    <a href="time-shooter-3-swat"><img src="timershooter3swat.png" alt="timeshooter3swat"></a>
+    <a href="cookieclicker"><img src="CookieClicker.png" alt="CookieCLicker"> </a>
+    <a href="bitlife"> <img src="bitlife.png" alt="bitlife"> </a>	    
+    <a href="Jacksmith"> <img src="Jacksmith.png" alt="jacksmith"> </a>
+    <a href="Paperio2"><img src="paperio.png" alt="paper-io"></a>
+    <a href="smash-karts"><img src="smashkarts.png" alt="smashkarts"></a>
+    <a href="snow-rider3d"><img src="snowrider3d.png" alt="snowrider3d"></a>
+    <a href="Bubble-Tanks"><img src="bubbletanks.png" alt="bubbletanks"></a>
+    <a href="funny-shooter2"><img src="funnyshooter2.png" alt="funnyshooter2"></a>
+    <a href="BasketballStars"><img src="basketballstars.png" alt="basketballstars"></a>
+    <a href="BobTheRobber5"><img src="bobtherobber.png" alt="bobtherobber"></a>
+    <a href="OvO"><img src="download.png" alt="ovo"></a>
+    <a href="BlockBlast"><img src="blockblast.png" alt="blockblast"></a>
+    <a href="tetris"><img src="tetris.png" alt="tetris"></a>
+    <a href="gunspin"><img src="gunspin.png" alt="gunspin"></a>
+    <a href="MaskedForces"><img src="MaskedForces.png" alt="maskedforces"></a>
+    <a href="BurritoBison"><img src="BurritoBison.png" alt="burritobison"></a>
+    <a href="eaglecraft"><img src="eaglecraft.png" alt="minecraft"></a>
+    <a href="papas.html"><img src="papas.png" alt="papas"></a>
+    <a herf="ducklife.html"><img src="duckliife.png" alt="ducklife"></a>
+    <a href="grand-theft-almost"><img src="grandtheftalmost.png" alt="grandtheftalmost.png"></a>
+    <a href="1v1lol"><img src="1v1lol.png" alt="1v1lol"></a>
+          <p>more coming soon</p>
+      </body>
+    </html>
+  </div>
+
+  <script>
+    const allowedEmails = ["allowedemail1@gmail.com", "allowedemail2@gmail.com"];
+
+    function handleCredentialResponse(response) {
+      const token = response.credential;
+      const decodedToken = parseJwt(token); // Decode the JWT to get user email
+
+      if (allowedEmails.includes(decodedToken.email)) {
+        // Authorized: Show the VIP content
+        document.getElementById("signin").style.display = "none";
+        document.getElementById("content").style.display = "block";
+      } else {
+        // Unauthorized: Redirect to deny.html
+        window.location.href = "deny.html";
       }
-    </style>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Unblocked gamesss</title>
-    <link rel="stylesheet" href="./style1.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
-  </head>
-  <body>
-    <main>
-   <header class="header">
-        <h1>UNBLOCKED GAMES</h1>
-        <nav>
-            <a href="creds.html">FEEDBACK</a>
-            <h3>GAMES</h3>
-            <a href="msgs.html">INFO</a>
-            <a href="index.html">HOME</a>
-        </nav>
-   </header>
-      <audio id="myAudio" hidden autoplay>
-  <source src="background-music-soft-calm-333111.mp3" type="audio/mpeg">
-</audio>
-<a href="time-shooter-3-swat"><img src="timershooter3swat.png" alt="timeshooter3swat"></a>
-<a href="cookieclicker"><img src="CookieClicker.png" alt="CookieCLicker"> </a>
-<a href="bitlife"> <img src="bitlife.png" alt="bitlife"> </a>	    
-<a href="Jacksmith"> <img src="Jacksmith.png" alt="jacksmith"> </a>
-<a href="Paperio2"><img src="paperio.png" alt="paper-io"></a>
-<a href="smash-karts"><img src="smashkarts.png" alt="smashkarts"></a>
-<a href="snow-rider3d"><img src="snowrider3d.png" alt="snowrider3d"></a>
-<a href="Bubble-Tanks"><img src="bubbletanks.png" alt="bubbletanks"></a>
-<a href="funny-shooter2"><img src="funnyshooter2.png" alt="funnyshooter2"></a>
-<a href="BasketballStars"><img src="basketballstars.png" alt="basketballstars"></a>
-<a href="BobTheRobber5"><img src="bobtherobber.png" alt="bobtherobber"></a>
-<a href="OvO"><img src="download.png" alt="ovo"></a>
-<a href="BlockBlast"><img src="blockblast.png" alt="blockblast"></a>
-<a href="tetris"><img src="tetris.png" alt="tetris"></a>
-<a href="gunspin"><img src="gunspin.png" alt="gunspin"></a>
-<a href="MaskedForces"><img src="MaskedForces.png" alt="maskedforces"></a>
-<a href="BurritoBison"><img src="BurritoBison.png" alt="burritobison"></a>
-<a href="eaglecraft"><img src="eaglecraft.png" alt="minecraft"></a>
-<a href="papas.html"><img src="papas.png" alt="papas"></a>
-<a href="grand-theft-almost"><img src="grandtheftalmost.png" alt="grandtheftalmost.png"></a>
-<a href="1v1lol"><img src="1v1lol.png" alt="1v1lol"></a>
-      <p>more coming soon</p>
-  </body>
+    }
+
+    function parseJwt(token) {
+      const base64Url = token.split('.')[1];
+      const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+      const jsonPayload = decodeURIComponent(atob(base64).split('').map(function (c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+      }).join(''));
+      return JSON.parse(jsonPayload);
+    }
+
+    window.onload = function () {
+      google.accounts.id.initialize({
+        client_id: "YOUR_CLIENT_ID",
+        callback: handleCredentialResponse
+      });
+      google.accounts.id.prompt(); // Automatically show the sign-in prompt
+    };
+  </script>
+</body>
 </html>
